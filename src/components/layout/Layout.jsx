@@ -7,6 +7,10 @@ const NAV = [
   { to: '/yoy',      label: 'YoY 분석' },
 ]
 
+const NAV_BOTTOM = [
+  { to: '/upload', label: '📊 데이터 업데이트' },
+]
+
 export default function Layout() {
   return (
     <div className="flex h-screen overflow-hidden">
@@ -33,8 +37,23 @@ export default function Layout() {
             </NavLink>
           ))}
         </nav>
-        <div className="px-5 py-3 border-t border-brand-700 text-xs text-brand-200">
-          2022.01 – 2026.04
+        <div className="px-3 pb-2 border-t border-brand-700 pt-2">
+          {NAV_BOTTOM.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `block px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  isActive
+                    ? 'bg-brand-600 text-white'
+                    : 'text-brand-200 hover:bg-brand-700 hover:text-white'
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+          <p className="px-3 pt-2 text-xs text-brand-300">2022.01 – 2026.04</p>
         </div>
       </aside>
 

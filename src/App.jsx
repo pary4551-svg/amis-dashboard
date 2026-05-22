@@ -4,6 +4,7 @@ import Overview from './pages/Overview'
 import BranchDetail from './pages/BranchDetail'
 import SGAAnalysis from './pages/SGAAnalysis'
 import YoYAnalysis from './pages/YoYAnalysis'
+import DataUpload from './pages/DataUpload'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="branch" element={<BranchDetail />} />
           <Route path="sga" element={<SGAAnalysis />} />
           <Route path="yoy" element={<YoYAnalysis />} />
+          <Route path="upload" element={<DataUpload />} />
         </Route>
       </Routes>
     </BrowserRouter>
