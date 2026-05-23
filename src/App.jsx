@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Overview from './pages/Overview'
 import BranchDetail from './pages/BranchDetail'
@@ -8,7 +8,7 @@ import DataUpload from './pages/DataUpload'
 
 export default function App() {
   return (
-    <BrowserRouter basename="/amis-dashboard">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/overview" replace />} />
@@ -19,6 +19,6 @@ export default function App() {
           <Route path="upload" element={<DataUpload />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
