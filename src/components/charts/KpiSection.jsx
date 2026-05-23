@@ -81,12 +81,12 @@ export default function KpiSection({ rows }) {
       {/* KPI 카드 6개 */}
       {kpi && (
         <div className="grid grid-cols-6 gap-3">
-          <KpiCard label="외형매출"  value={kpi.외형매출}   unit="억" yoy={kpi.외형매출_yoy} />
-          <KpiCard label="판관비"    value={kpi.판관비}     unit="억" yoy={kpi.판관비_yoy}   positiveGood={false} />
-          <KpiCard label="판관비율"  value={kpi.판관비율}   unit="%" yoy={kpi.판관비율_yoy}  isRate={true} positiveGood={false} />
-          <KpiCard label="영업이익"  value={kpi.영업이익}   unit="억" yoy={kpi.영업이익_yoy} />
-          <KpiCard label="영업이익률" value={kpi.영업이익률} unit="%" yoy={kpi.영업이익률_yoy} isRate={true} />
-          <KpiCard label="당기순이익" value={kpi.당기순이익} unit="억" yoy={kpi.당기순이익_yoy} />
+          <KpiCard label="외형매출"   value={kpi.외형매출}   unit="억" prev={kpi.외형매출_prev}   yoy={kpi.외형매출_yoy} />
+          <KpiCard label="판관비"     value={kpi.판관비}     unit="억" prev={kpi.판관비_prev}     yoy={kpi.판관비_yoy}   positiveGood={false} />
+          <KpiCard label="판관비율"   value={kpi.판관비율}   unit="%" prev={kpi.판관비율_prev}   yoy={kpi.판관비율_yoy}  isRate={true} positiveGood={false} />
+          <KpiCard label="영업이익"   value={kpi.영업이익}   unit="억" prev={kpi.영업이익_prev}   yoy={kpi.영업이익_yoy} />
+          <KpiCard label="영업이익률" value={kpi.영업이익률} unit="%" prev={kpi.영업이익률_prev} yoy={kpi.영업이익률_yoy} isRate={true} />
+          <KpiCard label="당기순이익" value={kpi.당기순이익} unit="억" prev={kpi.당기순이익_prev} yoy={kpi.당기순이익_yoy} />
         </div>
       )}
     </div>
